@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'sqlite3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -43,14 +43,14 @@ group :development, :test do
 end
 group :production do
   # postgresql
-  gem 'pg'
+  
   # enabling features such as static asset serving and logging on Heroku
   gem 'rails_12factor'
 end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'sqlite3'
+  
 
 end
 

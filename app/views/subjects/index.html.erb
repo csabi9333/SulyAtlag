@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tantárgyak listája</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr class="success">
+      
+      <th>Tantárgy neve</th>
+      <th>Tantárgy kredite</th>
+
+
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subjects.each do |subject| %>
+      <tr class="info">
+        <td><%= subject.name %></td>
+        <td><%= subject.k_index %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

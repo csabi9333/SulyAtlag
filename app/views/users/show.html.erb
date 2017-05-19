@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Felhasználó neve:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Kor:</strong>
+  <%= @user.age %>
+</p>
+<p>
+  <strong>Súlyozott Átlag:</strong>
+  <%= @user.avg %>
+</p>
+
+<div id="subjects">
+  <%= render partial: "subjects/subject", collection: @user.subjects %>
+</div>
+<%= render partial: 'subjects/form', locals: {subject: @user.subjects.create()} %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,12 @@
+<div id="subject_<%= subject.id%>">
+  <h3><%= subject.name %></h3>
+  <%= subject.created_at.strftime('%F %H:%M') %>
+  <div class="subject_k_index">
+    <%= subject.k_index %>
+  </div>
+  <div class="subject_eredmeny">
+    <%= subject.eredmeny %>
+  </div>
+  <%= link_to 'törlés', subject, method: :delete, data: { confirm: 'Biztos?' }, remote:true %>
+  <hr/>
+</div>

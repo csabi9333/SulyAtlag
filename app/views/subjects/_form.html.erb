@@ -1,0 +1,43 @@
+<%= form_with(model: subject, local: true) do |f| %>
+
+
+    <div class="field">
+      <%= f.label :Már_Meglévő_Nevek %>
+      <% subjects_array = Subject.all.map { |subject| [subject.name] } %>
+      <%= f.select :name, options_for_select(subjects_array) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :Kreditindex %>
+      <%= f.text_field :k_index %>
+    </div>
+    <div class="field">
+      <%= f.label :Osztályzat %>
+      <%= f.select :eredmeny, ['1','2','3', '4', '5'] %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Tárgy hozzáadása"  %>
+    </div>
+   <% end %>
+   <%= form_with(model: subject, local: true) do |u| %>
+    <div class="field">
+      <%= u.label :Név %>
+      <%= u.text_field :name %>
+    </div>
+    <div class="field">
+      <%= u.label :Kreditindex %>
+      <%= u.text_field :k_index %>
+    </div>
+    <div class="field">
+      <%= u.label :Osztályzat %>
+      <%= u.select :eredmeny, ['1','2','3', '4', '5'] %>
+    </div>
+
+
+
+    <div class="actions">
+      <%= u.submit "Tárgy hozzáadása"  %>
+    </div>
+
+
+<% end %>
